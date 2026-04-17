@@ -1,0 +1,411 @@
+/* ============================================
+   CSS CUSTOM PROPERTIES
+============================================ */
+:root {
+  --color-primary:     #1A3C6E;
+  --color-accent:      #2ECC71;
+  --color-bg-light:    #F4F7FC;
+  --color-white:       #FFFFFF;
+  --color-text-dark:   #1E1E2E;
+  --color-text-muted:  #6C757D;
+  --color-border:      #DEE2E6;
+  --color-risk-high:   #E67E22;
+  --color-risk-vhigh:  #E74C3C;
+
+  --font-family:       'Inter', sans-serif;
+  --radius-card:       12px;
+  --shadow-card:       0 2px 16px rgba(0, 0, 0, 0.07);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.2px;
+  font-weight: 600;
+}
+
+/* ============================================
+   NAVBAR
+============================================ */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background: var(--color-white);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--color-primary) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--color-text-dark);
+  margin: 0 8px;
+}
+
+.btn-primary-custom {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 8px 24px;
+}
+
+.btn-primary-custom:hover {
+  background-color: #16325B;
+  color: var(--color-white);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 12px 32px;
+}
+
+.btn-accent:hover {
+  background-color: #27AE60;
+  color: var(--color-white);
+}
+
+.btn-outline-custom {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+.btn-outline-custom:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* ============================================
+   HERO SECTION
+============================================ */
+.hero-section {
+  background-color: var(--color-primary);
+  /* A subtle linear gradient adds a premium feel */
+  background-image: linear-gradient(135deg, #1A3C6E 0%, #16325B 100%);
+  color: var(--color-white);
+  padding: 80px 0;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+}
+
+/* ============================================
+   STATS STRIP
+============================================ */
+.stats-strip {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 28px 0;
+}
+
+.stats-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.stats-strip__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px 24px;
+}
+
+.stats-strip__value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.stats-strip__label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.stats-strip__divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-border);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   FEATURES SECTION
+============================================ */
+.features-section {
+  background-color: var(--color-bg-light);
+  padding: 80px 0;
+}
+
+.feature-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  border: 1px solid var(--color-border);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+/* ============================================
+   FUND PERFORMANCE
+============================================ */
+.performance-section {
+  background-color: var(--color-white);
+  padding: 80px 0;
+}
+
+.fund-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.fund-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.fund-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.fund-card__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.fund-card__badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: #E8EEF7;
+  border: 1px solid #C5D3E8;
+  border-radius: 20px;
+  padding: 3px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.fund-card__risk {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.fund-card__risk--high {
+  color: var(--color-risk-high);
+  background-color: #FEF0E6;
+}
+
+.fund-card__risk--very-high {
+  color: var(--color-risk-vhigh);
+  background-color: #FDECEA;
+}
+
+.fund-card__returns {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fund-card__returns li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.fund-card__period {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.fund-card__return--positive {
+  color: #1A9E4A;
+  font-weight: 700;
+}
+
+.fund-card__meta {
+  display: flex;
+  gap: 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.fund-card__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fund-card__meta-label {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fund-card__meta-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.fund-card__note {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+.fund-card__btn {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 6px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-top: auto;
+}
+
+.fund-card__btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ============================================
+   CTA BANNER
+============================================ */
+.cta-banner {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(135deg, #1A3C6E 0%, #16325B 100%);
+  color: var(--color-white);
+  padding: 64px 0;
+  text-align: center;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+  background-color: #1E1E2E;
+  color: #E2E8F0;
+  padding: 64px 0 24px;
+}
+
+.footer a {
+  color: #A0AEC0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--color-white);
+}
+
+.footer-divider {
+  border-color: rgba(255,255,255,0.1);
+  margin: 32px 0 24px;
+}
+
+.footer-disclaimer {
+  font-size: 12px;
+  color: #A0AEC0;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  .stats-strip__inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .stats-strip__item {
+    width: 100%;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .stats-strip__item:last-child {
+    border-bottom: none;
+  }
+  .stats-strip__divider {
+    display: none;
+  }
+  .stats-strip__value {
+    font-size: 20px;
+  }
+}
