@@ -108,6 +108,10 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+.hero-section .row {
+  gap: 40px;
+}
+
 .hero-title {
   font-size: 48px;
   font-weight: 700;
@@ -124,11 +128,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-image {
   width: 100%;
-  max-width: 450px;     /* limit size */
+  max-width: 420px;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: block;
+  margin-left: auto;
 }
 
 /* ============================================
