@@ -18,6 +18,10 @@
   --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   color: var(--color-text-dark);
@@ -48,45 +52,47 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 8px;
 }
 
+.btn-primary-custom, .btn-outline-custom, .btn-accent {
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 12px 24px; /* Uniform padding */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
 .btn-primary-custom {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: var(--color-white);
-  border-radius: 6px;
-  font-weight: 600;
-  padding: 8px 24px;
 }
 
 .btn-primary-custom:hover {
   background-color: #16325B;
   color: var(--color-white);
+  transform: scale(1.05); /* Slight scale */
 }
 
 .btn-accent {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-white);
-  border-radius: 6px;
-  font-weight: 600;
-  padding: 12px 32px;
 }
 
 .btn-accent:hover {
   background-color: #27AE60;
   color: var(--color-white);
+  transform: scale(1.05);
 }
 
 .btn-outline-custom {
   border: 2px solid var(--color-white);
   color: var(--color-white);
-  border-radius: 6px;
-  font-weight: 600;
-  padding: 10px 30px;
-  text-decoration: none;
 }
+
 .btn-outline-custom:hover {
   background-color: var(--color-white);
   color: var(--color-primary);
+  transform: scale(1.05);
 }
 
 /* ============================================
@@ -104,14 +110,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-subtitle {
   font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* ============================================
@@ -121,13 +134,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-white);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  padding: 28px 0;
+  padding: 40px 0;
 }
 
 .stats-strip__inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0;
 }
 
@@ -138,6 +151,11 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   text-align: center;
   padding: 8px 24px;
+  transition: transform 0.3s ease;
+}
+
+.stats-strip__item:hover {
+  transform: scale(1.05);
 }
 
 .stats-strip__value {
@@ -386,17 +404,29 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================
    RESPONSIVE
 ============================================ */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
   }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .hero-section .d-flex {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-section .btn {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
   .stats-strip__inner {
     flex-direction: column;
     gap: 0;
   }
   .stats-strip__item {
     width: 100%;
-    padding: 16px 24px;
+    padding: 24px 24px;
     border-bottom: 1px solid var(--color-border);
   }
   .stats-strip__item:last-child {

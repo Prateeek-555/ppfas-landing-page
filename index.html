@@ -27,11 +27,7 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <!-- Placeholder for Logo -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-wallet-fill me-2" viewBox="0 0 16 16">
-          <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
-          <path d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
-        </svg>
+        <img src="./assets/images/logo.png" alt="PPFAS Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x40/1A3C6E/FFFFFF?text=PPFAS+AMC';" style="height: 40px; width: auto; vertical-align: middle; margin-right: 8px;">
         PPFAS AMC
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,8 +62,7 @@
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <!-- Using a high quality SVG illustration from unDraw as a placeholder -->
-          <img src="https://raw.githubusercontent.com/undrawio/undraw/master/illustrations/svg/undraw_investing_re_h1ar.svg" alt="Investing Illustration" class="img-fluid" style="max-height: 350px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));">
+          <img src="./assets/images/hero-bg.jpg" alt="Investing Illustration" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&w=800&q=80';" class="img-fluid hero-image">
         </div>
       </div>
     </div>
@@ -261,7 +256,7 @@
   <!-- ============================================
        7. FOOTER
   ============================================ -->
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-4">
@@ -296,6 +291,12 @@
         </div>
         <div class="col-md-6 text-md-end">
           <p class="footer-disclaimer mb-0 fst-italic">Mutual fund investments are subject to market risks.</p>
+        </div>
+      </div>
+      
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="small text-muted mb-0" style="opacity: 0.7;">This is a UI concept project and not affiliated with PPFAS Mutual Fund.</p>
         </div>
       </div>
     </div>
